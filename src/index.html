@@ -5,11 +5,18 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=5.0">
   <title>Stencil Component Starter</title>
   <script src="/build/sv5.js"></script>
+  <script type="text/javascript">
+    function getSv5Shapes(){
+      let container =  '{ "rect1" : { "x": "100px", "y": "10px", "width": "80px", "heigth": "70px", "stroke": "red", "fill": "green"}}';
+      console.log(JSON.parse(container));
+      return container;
+    }
+  </script>
 
 </head>
-<body>
+<body onload="getSv5Shapes()">
 
-  <sv5-canvas first="Sv5" last="Canvas"></sv5-canvas>
+  <sv5-canvas first="Sv5" last="Canvas" ></sv5-canvas>
 
 </body>
 </html>
