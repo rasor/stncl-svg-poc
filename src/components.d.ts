@@ -40,15 +40,46 @@ export namespace Components {
     */
     'middle'?: string;
   }
+
+  interface Sv5Canvas {
+    /**
+    * The first name
+    */
+    'first': string;
+    /**
+    * The last name
+    */
+    'last': string;
+    /**
+    * The middle name
+    */
+    'middle': string;
+  }
+  interface Sv5CanvasAttributes extends StencilHTMLAttributes {
+    /**
+    * The first name
+    */
+    'first'?: string;
+    /**
+    * The last name
+    */
+    'last'?: string;
+    /**
+    * The middle name
+    */
+    'middle'?: string;
+  }
 }
 
 declare global {
   interface StencilElementInterfaces {
     'MyComponent': Components.MyComponent;
+    'Sv5Canvas': Components.Sv5Canvas;
   }
 
   interface StencilIntrinsicElements {
     'my-component': Components.MyComponentAttributes;
+    'sv5-canvas': Components.Sv5CanvasAttributes;
   }
 
 
@@ -58,12 +89,20 @@ declare global {
     new (): HTMLMyComponentElement;
   };
 
+  interface HTMLSv5CanvasElement extends Components.Sv5Canvas, HTMLStencilElement {}
+  var HTMLSv5CanvasElement: {
+    prototype: HTMLSv5CanvasElement;
+    new (): HTMLSv5CanvasElement;
+  };
+
   interface HTMLElementTagNameMap {
     'my-component': HTMLMyComponentElement
+    'sv5-canvas': HTMLSv5CanvasElement
   }
 
   interface ElementTagNameMap {
     'my-component': HTMLMyComponentElement;
+    'sv5-canvas': HTMLSv5CanvasElement;
   }
 
 

@@ -1,7 +1,7 @@
 import { Config } from '@stencil/core';
 
 export const config: Config = {
-  namespace: 'mycomponent',
+  namespace: 'sv5',
   outputTargets:[
     { type: 'dist' },
     { type: 'docs' },
