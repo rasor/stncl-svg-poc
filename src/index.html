@@ -7,7 +7,10 @@
   <script src="/build/sv5.js"></script>
   <script type="text/javascript">
     function getSv5Shapes(){
-      let container =  '{ "rect1" : { "x": "100px", "y": "10px", "width": "80px", "heigth": "70px", "stroke": "red", "fill": "green"}}';
+      let container =  '{'+
+      '"rect1" : { "x": "100px", "y": "10px", "width": "80px", "heigth": "70px", "stroke": "red", "fill": "green"},'+
+      '"rect2" : { "x": "200px", "y": "10px", "width": "70px", "heigth": "60px", "stroke": "blue", "fill": "brown"}'+
+      '}';
       console.log(JSON.parse(container));
       return container;
     }
