@@ -6,20 +6,23 @@
   <title>Stencil Component Starter</title>
   <script src="/build/sv5.js"></script>
   <script type="text/javascript">
-    function getSv5Shapes(){
-      let container =  '{'+
-      '"rect1" : { "x": "100px", "y": "10px", "width": "80px", "heigth": "70px", "stroke": "red", "fill": "green"},'+
-      '"rect2" : { "x": "200px", "y": "10px", "width": "70px", "heigth": "60px", "stroke": "blue", "fill": "brown"}'+
-      '}';
-      console.log(JSON.parse(container));
-      return container;
-    }
+    function setSv5Shapes(){
+      let container =  {
+      shapes: [{ "x": "100px", "y": "10px", "width": "80px", "heigth": "70px", "stroke": "red", "fill": "green"},
+      { "x": "200px", "y": "10px", "width": "70px", "heigth": "60px", "stroke": "blue", "fill": "brown"}]
+      };
+      let containerJson = JSON.stringify(container);
+      console.log(containerJson);
+      let canvas = document.getElementById("canvas");
+      canvas.setAttribute("shapes", containerJson);
+      console.log(canvas);      
+    };
   </script>
 
 </head>
-<body onload="getSv5Shapes()">
+<body onload="setSv5Shapes()">
 
-  <sv5-canvas first="Sv5" last="Canvas" ></sv5-canvas>
+  <sv5-canvas id="canvas" first="Sv5" last="Canvas" shapes="" ></sv5-canvas>
 
 </body>
 </html>

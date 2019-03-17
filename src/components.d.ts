@@ -54,6 +54,7 @@ export namespace Components {
     * The middle name
     */
     'middle': string;
+    'shapes': any;
   }
   interface Sv5CanvasAttributes extends StencilHTMLAttributes {
     /**
@@ -68,6 +69,7 @@ export namespace Components {
     * The middle name
     */
     'middle'?: string;
+    'shapes'?: any;
   }
 }
 
