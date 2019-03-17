@@ -37,6 +37,9 @@ export class Sv5Canvas {
     console.log(this.shapes);
     return <svg x="0px" y="0px" width="300px" height="100px" viewBox="0 0 300 100">
       <rect x="10px" y="5px" width="90px" height="90px" stroke="black" fill="white" ></rect>
+      {this.shapes.map((s) =>
+        <rect x={s.x} y={s.y} width="90px" height="90px" stroke={s.stroke} fill={s.fill} ></rect>
+      )}
     </svg>;
   }
 }
