@@ -14,7 +14,7 @@
       let containerJson = JSON.stringify(container);
       console.log(containerJson);
       let canvas = document.getElementById("canvas");
-      canvas.setAttribute("shapes", containerJson);
+      canvas.setAttribute("content", containerJson);
       console.log(canvas);      
     };
   </script>
@@ -22,7 +22,7 @@
 </head>
 <body onload="setSv5Shapes()">
 
-  <sv5-canvas id="canvas" first="Sv5" last="Canvas" shapes="" ></sv5-canvas>
+  <sv5-canvas id="canvas" first="Sv5" last="Canvas" content="" ></sv5-canvas>
 
 </body>
 </html>
