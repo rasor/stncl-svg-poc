@@ -24,7 +24,7 @@ ctrl-c
 * Add content to new WC
 * Send data to the WC from /src/index.html
 
-This PoC is cloned and continued in [svgram/wc-core](https://github.com/svgram/wc-core)
+This PoC is cloned and continued in [svgram/svgram-wc-core](https://github.com/svgram/svgram-wc-core)
 
 ## Credits
 
