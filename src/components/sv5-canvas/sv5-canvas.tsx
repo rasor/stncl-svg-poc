@@ -35,6 +35,8 @@ export class Sv5Canvas {
   }
 
   render() {
+    // https://stenciljs.com/docs/templating-jsx
+    // https://www.typescriptlang.org/docs/handbook/jsx.html
     console.log(this.getText());
     console.log(this.content);
     this.shapes = JSON.parse(this.content).shapes;
